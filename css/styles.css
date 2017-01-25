@@ -1,0 +1,40 @@
+body {
+  background-color: #98cd98;
+}
+.my-header {
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  background-image: url(../img/dice.jpg);
+}
+.my-header h1 {
+  text-align: center;
+  font-size: 6em;
+  font-weight: 600;
+  padding-top: 30px;
+  color: #990099;
+  text
+}
+.column-header {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 600;
+}
+#roll-die-player1, #roll-die-player2 {
+  text-align: center;
+  color: green;
+}
+#hold-player1, #hold-player2 {
+  text-align: center;
+  color: blue;
+}
+#player1-score-section, #player2-score-section {
+  padding-left: 100px;
+}
+#player1-rolled-section, #player2-rolled-section {
+  padding-left: 100px;
+}
+#player1-turn-total-section, #player2-turn-total-section {
+  padding-left: 100px;
+}

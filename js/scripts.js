@@ -12,11 +12,6 @@ function dieRoll () {
 
 
 
-
-
-
-
-
 // front end
 $(document).ready(function(){
   $("form#roll-die-player1").submit(function(event){
@@ -80,6 +75,5 @@ $(document).ready(function(){
       gameScore1 = 0;
     }
   });
-
 
 });
