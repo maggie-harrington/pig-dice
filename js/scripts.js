@@ -1,6 +1,8 @@
 // back end
 var turnTotal1 = 0; // doesn't seem to work unless global
 var turnTotal2 = 0; // doesn't seem to work unless global
+var gameScore1 = 0;
+var gameScore2 = 0;
 
 function dieRoll () {
   return Math.floor(Math.random()*6 + 1);
@@ -26,10 +28,11 @@ $(document).ready(function(){
     if (result1 === 1) {
       turnTotal1 = 0;
       alert ("Player 2's turn!");
+      $("#turn-total-player1").empty();
     } else {
       turnTotal1 += result1;
+      $("#turn-total-player1").append(turnTotal1);
     }
-    $("#turn-total-player1").append(turnTotal1);
   });
 
   $("form#roll-die-player2").submit(function(event){
@@ -41,9 +44,30 @@ $(document).ready(function(){
     if (result2 === 1) {
       turnTotal2 = 0;
       alert ("Player 1's turn!");
+      $("#turn-total-player2").empty();
     } else {
       turnTotal2 += result2;
+      $("#turn-total-player2").append(turnTotal2);
     }
-    $("#turn-total-player2").append(turnTotal2);
+  });
+
+  $("form#hold-player1").submit(function(event) {
+    event.preventDefault();
+    $("#game-score-player1").empty();
+    $("#turn-total-player1").empty();
+    $("#current-roll-player1").empty();
+    gameScore1 += turnTotal1;
+    $("#game-score-player1").append(gameScore1);
+    turnTotal1 = 0;
+  });
+
+  $("form#hold-player2").submit(function(event) {
+    event.preventDefault();
+    $("#game-score-player2").empty();
+    $("#turn-total-player2").empty();
+    $("#current-roll-player2").empty();
+    gameScore2 += turnTotal2;
+    $("#game-score-player2").append(gameScore2);
+    turnTotal2 = 0;
   });
 });
