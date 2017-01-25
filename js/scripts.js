@@ -24,6 +24,8 @@ $(document).ready(function(){
       turnTotal1 = 0;
       alert ("Player 2's turn!");
       $("#turn-total-player1").empty();
+      $(".hide1").hide();
+      $(".hide2").show();
     } else {
       turnTotal1 += result1;
       $("#turn-total-player1").append(turnTotal1);
@@ -40,6 +42,8 @@ $(document).ready(function(){
       turnTotal2 = 0;
       alert ("Player 1's turn!");
       $("#turn-total-player2").empty();
+      $(".hide2").hide();
+      $(".hide1").show();
     } else {
       turnTotal2 += result2;
       $("#turn-total-player2").append(turnTotal2);
@@ -54,6 +58,8 @@ $(document).ready(function(){
     gameScore1 += turnTotal1;
     $("#game-score-player1").append(gameScore1);
     turnTotal1 = 0;
+    $(".hide1").hide();
+    $(".hide2").show();
     if (gameScore1 >= 100) {
       alert("Player 1 wins!");
       gameScore1 = 0;
@@ -69,6 +75,8 @@ $(document).ready(function(){
     gameScore2 += turnTotal2;
     $("#game-score-player2").append(gameScore2);
     turnTotal2 = 0;
+    $(".hide2").hide();
+    $(".hide1").show();
     if (gameScore2 >= 100) {
       alert("Player 2 wins!");
       gameScore2 = 0;

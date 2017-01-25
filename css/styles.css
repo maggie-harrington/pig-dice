@@ -13,7 +13,11 @@ body {
   font-weight: 600;
   padding-top: 30px;
   color: #990099;
-  text
+  text-shadow:
+   -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+     1px 1px 0 white;
 }
 .column-header {
   padding-top: 30px;
