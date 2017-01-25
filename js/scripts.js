@@ -1,8 +1,8 @@
 // back end
 var turnTotal1 = 0; // doesn't seem to work unless global
-var turnTotal2 = 0; // doesn't seem to work unless global
-var gameScore1 = 0;
-var gameScore2 = 0;
+var turnTotal2 = 0; // ""
+var gameScore1 = 0; // ""
+var gameScore2 = 0; // ""
 
 function dieRoll () {
   return Math.floor(Math.random()*6 + 1);
@@ -59,6 +59,11 @@ $(document).ready(function(){
     gameScore1 += turnTotal1;
     $("#game-score-player1").append(gameScore1);
     turnTotal1 = 0;
+    if (gameScore1 >= 100) {
+      alert("Player 1 wins!");
+      gameScore1 = 0;
+      gameScore2 = 0;
+    }
   });
 
   $("form#hold-player2").submit(function(event) {
@@ -69,5 +74,12 @@ $(document).ready(function(){
     gameScore2 += turnTotal2;
     $("#game-score-player2").append(gameScore2);
     turnTotal2 = 0;
+    if (gameScore2 >= 100) {
+      alert("Player 2 wins!");
+      gameScore2 = 0;
+      gameScore1 = 0;
+    }
   });
+
+
 });
