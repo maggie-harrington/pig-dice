@@ -27,11 +27,9 @@ body {
 }
 #roll-die-player1, #roll-die-player2 {
   text-align: center;
-  color: green;
 }
 #hold-player1, #hold-player2 {
   text-align: center;
-  color: blue;
 }
 #player1-score-section, #player2-score-section {
   padding-left: 100px;
@@ -41,4 +39,9 @@ body {
 }
 #player1-turn-total-section, #player2-turn-total-section {
   padding-left: 100px;
+}
+#rolled1-player1, #rolled1-player2 {
+  display: none;
+  color: red;
+  text-align: center;
 }
