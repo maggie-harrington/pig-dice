@@ -32,6 +32,14 @@ $(document).ready(function(){
     } else {
       turnTotal1 += result1;
       $("#turn-total-player1").append(turnTotal1);
+      if (gameScore1 + turnTotal1 >= 100) {
+        $("#win-player1").show();
+        $(".hide2").hide();
+        $(".hide1").hide();
+        $("#new-game").show();
+        gameScore1 = 0;
+        gameScore2 = 0;
+      }
     }
   });
 
@@ -53,6 +61,14 @@ $(document).ready(function(){
     } else {
       turnTotal2 += result2;
       $("#turn-total-player2").append(turnTotal2);
+      if (gameScore2 + turnTotal2 >= 100) {
+        $("#win-player2").show();
+        $(".hide1").hide();
+        $(".hide2").hide();
+        $("#new-game").show();
+        gameScore2 = 0;
+        gameScore1 = 0;
+      }
     }
   });
 
@@ -66,13 +82,6 @@ $(document).ready(function(){
     turnTotal1 = 0;
     $(".hide1").hide();
     $(".hide2").show();
-    if (gameScore1 >= 100) {
-      $("#win-player1").show();
-      $(".hide2").hide();
-      $("#new-game").show();
-      gameScore1 = 0;
-      gameScore2 = 0;
-    }
   });
 
   $("form#hold-player2").submit(function(event) {
@@ -85,13 +94,6 @@ $(document).ready(function(){
     turnTotal2 = 0;
     $(".hide2").hide();
     $(".hide1").show();
-    if (gameScore2 >= 100) {
-      $("#win-player2").show();
-      $(".hide1").hide();
-      $("#new-game").show();
-      gameScore2 = 0;
-      gameScore1 = 0;
-    }
   });
 });
 
