@@ -1,16 +1,17 @@
 body {
-  background-color: #ddeedd;
+  /*background-color: #ddeedd;*/
   color: white;
+  background-image: url(../img/dice.jpg);
 }
 .my-header {
   margin-top: 0px;
   padding-top: 30px;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
   background-image: url(../img/dice.jpg);
 }
 .my-header h1 {
   text-align: center;
-  font-size: 6em;
+  font-size: 8em;
   font-weight: 600;
   padding-top: 30px;
   color: #ff9933;
@@ -73,4 +74,9 @@ body {
   display: none;
   text-align: center;
   margin-top: 100px;
+  padding: 30px;
+}
+#new-game button {
+  margin: 40px;
+  border: 15px solid #ff9933;
 }
