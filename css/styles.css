@@ -80,3 +80,10 @@ body {
   margin: 40px;
   border: 15px solid #ff9933;
 }
+#two-dice {
+  text-align: center;
+}
+#original {
+  display: none;
+  text-align: center;
+}
