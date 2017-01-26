@@ -69,6 +69,7 @@ $(document).ready(function(){
     if (gameScore1 >= 100) {
       $("#win-player1").show();
       $(".hide2").hide();
+      $("#new-game").show();
       gameScore1 = 0;
       gameScore2 = 0;
     }
@@ -87,8 +88,16 @@ $(document).ready(function(){
     if (gameScore2 >= 100) {
       $("#win-player2").show();
       $(".hide1").hide();
+      $("#new-game").show();
       gameScore2 = 0;
       gameScore1 = 0;
     }
   });
+});
+
+$("form#new-game").submit(function(event) {
+  event.preventDefault();
+  $(".hide1").show();
+  $(".hide2").show();
+  $("form.new-game").hide();
 });
