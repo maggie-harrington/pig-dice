@@ -33,6 +33,9 @@ $(document).ready(function(){
       turnTotal1 += result1;
       $("#turn-total-player1").append(turnTotal1);
       if (gameScore1 + turnTotal1 >= 100) {
+        gameScore1 += turnTotal1;
+        $("#game-score-player1").empty();
+        $("#game-score-player1").append(gameScore1);
         $("#win-player1").show();
         $(".hide2").hide();
         $(".hide1").hide();
@@ -62,6 +65,9 @@ $(document).ready(function(){
       turnTotal2 += result2;
       $("#turn-total-player2").append(turnTotal2);
       if (gameScore2 + turnTotal2 >= 100) {
+        gameScore2 += turnTotal2;
+        $("#game-score-player2").empty();
+        $("#game-score-player2").append(gameScore2);
         $("#win-player2").show();
         $(".hide1").hide();
         $(".hide2").hide();
