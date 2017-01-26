@@ -24,6 +24,7 @@ $(document).ready(function(){
     if (result1 === 1) {
       turnTotal1 = 0;
       $("#turn-total-player1").empty();
+      $("#current-roll-player1").empty();
       $(".hide1").hide();
       $(".hide2").show();
       $("#rolled1-player1").show();
@@ -44,6 +45,7 @@ $(document).ready(function(){
     if (result2 === 1) {
       turnTotal2 = 0;
       $("#turn-total-player2").empty();
+      $("#current-roll-player2").empty();
       $(".hide2").hide();
       $(".hide1").show();
       $("#rolled1-player2").show();
@@ -65,7 +67,8 @@ $(document).ready(function(){
     $(".hide1").hide();
     $(".hide2").show();
     if (gameScore1 >= 100) {
-      alert("Player 1 wins!");
+      $("#win-player1").show();
+      $(".hide2").hide();
       gameScore1 = 0;
       gameScore2 = 0;
     }
@@ -82,10 +85,10 @@ $(document).ready(function(){
     $(".hide2").hide();
     $(".hide1").show();
     if (gameScore2 >= 100) {
-      alert("Player 2 wins!");
+      $("#win-player2").show();
+      $(".hide1").hide();
       gameScore2 = 0;
       gameScore1 = 0;
     }
   });
-
 });
